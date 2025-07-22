@@ -297,7 +297,7 @@ col1, col2, col3 = st.columns(3)
 def show_shap_plot(model_name, column):
     path = f"shap_plots/shap_summary_{model_name}.png"
     if os.path.exists(path):
-        column.image(path, caption=f"{model_name.upper()} SHAP Plot", use_container_width=True)
+        column.image(path, caption=f"{model_name.upper()} SHAP Plot", use_column_width=True)
         with open(path, "rb") as f:
             column.download_button(f"Download {model_name.upper()} SHAP Plot", f, file_name=f"{model_name}_shap.png")
     else:
