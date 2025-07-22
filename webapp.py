@@ -5,7 +5,9 @@ import joblib
 import os
 import datetime
 from fpdf import FPDF
+import warnings
 
+warnings.filterwarnings("ignore", category=UserWarning)
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="CKD Stage Prediction and Treatment AI", layout="wide")
 st.title("⚕️ CKD Stage Prediction and Treatment AI")
