@@ -5,9 +5,13 @@ import joblib
 import os
 import datetime
 from fpdf import FPDF
-import warnings
 
+# --- REMOVES WARNINGS ---
+import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings('ignore', message='.*use_column_width.*')
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="CKD Stage Prediction and Treatment AI", layout="wide")
 st.title("⚕️ CKD Stage Prediction and Treatment AI")
@@ -293,7 +297,7 @@ col1, col2, col3 = st.columns(3)
 def show_shap_plot(model_name, column):
     path = f"shap_plots/shap_summary_{model_name}.png"
     if os.path.exists(path):
-        column.image(path, caption=f"{model_name.upper()} SHAP Plot", use_column_width=True)
+        column.image(path, caption=f"{model_name.upper()} SHAP Plot", use_container_width=True)
         with open(path, "rb") as f:
             column.download_button(f"Download {model_name.upper()} SHAP Plot", f, file_name=f"{model_name}_shap.png")
     else:
