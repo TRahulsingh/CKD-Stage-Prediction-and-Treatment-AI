@@ -1,4 +1,4 @@
-# 🧬 Clinical CKD Stage Prediction & Treatment AI System
+# 🧬 CKD Stage Prediction and Treatment AI
 
 <div align="center">
 
@@ -29,7 +29,7 @@
 - [🏗️ Architecture](#️-architecture)
 - [🔧 Technical Stack](#-technical-stack)
 - [📁 Project Structure](#-project-structure)
-- [🚀 Getting Started](#-getting-started)
+- [🚀 Getting Started](#-getting-started)   
 - [📊 Model Pipeline](#-model-pipeline)
 - [🖥️ Web Application](#️-web-application)
 - [📈 Performance Metrics](#-performance-metrics)
@@ -224,8 +224,8 @@ graph TB
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/trahulsingh-ckd-stage-prediction-and-treatment-ai.git
-   cd trahulsingh-ckd-stage-prediction-and-treatment-ai
+   git clone https://github.com/TRahulsingh/CKD-Stage-Prediction-and-Treatment-AI.git
+   cd CKD-Stage-Prediction-and-Treatment-AI
    ```
 
 2. **Create a virtual environment**
@@ -431,15 +431,15 @@ The system generates comprehensive SHAP (SHapley Additive exPlanations) plots fo
 <tr>
 <td align="center">
 <b>CatBoost</b><br>
-<img src="shap_plots/catboost_shap_summary.png" width="250">
+<!-- <img src="shap_plots/catboost_shap_summary.png" width="250"> -->
 </td>
 <td align="center">
 <b>XGBoost</b><br>
-<img src="shap_plots/xgboost_shap_summary.png" width="250">
+<!-- <img src="shap_plots/xgboost_shap_summary.png" width="250"> -->
 </td>
 <td align="center">
 <b>LightGBM</b><br>
-<img src="shap_plots/lightgbm_shap_summary.png" width="250">
+<!-- <img src="shap_plots/lightgbm_shap_summary.png" width="250"> -->
 </td>
 </tr>
 </table>
@@ -599,79 +599,12 @@ Main prediction model combining three base estimators.
    - Select this repository
 
 3. **Configure Settings**
-   ```toml
-   # .streamlit/config.toml
-   [theme]
-   primaryColor = "#FF6B6B"
-   backgroundColor = "#FFFFFF"
-   secondaryBackgroundColor = "#F0F2F6"
-   textColor = "#262730"
-   font = "sans serif"
-   ```
+      - Select this webapp code
 
 4. **Deploy**
    - Click "Deploy"
    - Wait for build completion
    - Share your app URL!
-
-### 🐳 Docker Deployment
-
-```dockerfile
-# Dockerfile
-FROM python:3.8-slim
-
-WORKDIR /app
-
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-COPY . .
-
-EXPOSE 8501
-
-CMD ["streamlit", "run", "webapp.py"]
-```
-
-Build and run:
-```bash
-docker build -t ckd-predictor .
-docker run -p 8501:8501 ckd-predictor
-```
-
-### ☁️ Cloud Platform Deployment
-
-<details>
-<summary><b>AWS EC2</b></summary>
-
-```bash
-# Install dependencies
-sudo apt update
-sudo apt install python3-pip
-pip3 install -r requirements.txt
-
-# Run with systemd
-sudo nano /etc/systemd/system/ckd-app.service
-```
-</details>
-
-<details>
-<summary><b>Google Cloud Platform</b></summary>
-
-```yaml
-# app.yaml
-runtime: python38
-entrypoint: streamlit run webapp.py --server.port $PORT
-```
-</details>
-
-<details>
-<summary><b>Heroku</b></summary>
-
-```
-# Procfile
-web: sh setup.sh && streamlit run webapp.py
-```
-</details>
 
 ---
 
@@ -797,13 +730,13 @@ in the Software without restriction...
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/trahulsingh)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TRahulsingh)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tahulsingh21@gmail.com)
 
 
 ### 💬 Get Help
 
 - 🐛 **Issues**: [GitHub Issues](https://github.com/TRahulsingh/CKD-Stage-Prediction-and-Treatment-AI/issues)
 - 💡 **Discussions**: [GitHub Discussions](https://github.com/TRahulsingh/CKD-Stage-Prediction-and-Treatment-AI/discussions)
-- 📖 **Wiki**: [Project Wiki](https://github.com/TRahulsingh/CKD-Stage-Prediction-and-Treatment-AI/wiki)
 
 ---
 
