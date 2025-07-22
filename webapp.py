@@ -10,7 +10,7 @@ from fpdf import FPDF
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings('ignore', message='.*use_column_width.*')
-st.set_option('deprecation.showPyplotGlobalUse', False)
+# st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="CKD Stage Prediction and Treatment AI", layout="wide")
