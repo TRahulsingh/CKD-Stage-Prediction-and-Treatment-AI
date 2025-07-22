@@ -206,7 +206,7 @@ streamlit run webapp.py --logger.level=debug
 ## 🤔 Questions?
 - Open an issue
 - Join discussions
-- Email trahulsingh@email.com
+- Email tahulsingh21@gmail.com
 
 ## 🏆 Recognition
 - Listed in README
